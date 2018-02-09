@@ -231,7 +231,10 @@ class Share extends Downloader {
       options: {
         body: Core.objectToQueryString(body),
         credentials: 'include',
-        method: 'POST'
+        method: 'POST',
+        headers: {
+          'Content-type': 'application/x-www-form-urlencoded; charset=UTF-8'
+        }
       }
     }
     const prefix = this.getPrefixLength()
